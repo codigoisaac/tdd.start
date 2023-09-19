@@ -1,4 +1,4 @@
-describe("Papyrica App", () => {
+describe("Papyric App", () => {
   it("visits the app home", () => {
     cy.visit("http://localhost:3000/");
     cy.get('div[data-test="book-list"]').should("exist");

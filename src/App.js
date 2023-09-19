@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Typography variant="h1" component="h1">
-        Papyrica
+        Papyric
       </Typography>
 
       <BookList books={books} />
