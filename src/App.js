@@ -1,19 +1,8 @@
 import { Typography } from "@mui/material";
+import { BookList } from "./components/BookList";
 
 function App() {
   const books = [{ name: "Refactoring" }, { name: "Domain-Driven Design" }];
-
-  const renderBooks = () => (
-    <div data-test="book-list">
-      {books.map((book) => (
-        <div className="book-item">
-          <Typography variant="h4" component="h2" className="book-title">
-            {book.name}
-          </Typography>
-        </div>
-      ))}
-    </div>
-  );
 
   return (
     <div className="App">
@@ -21,7 +10,7 @@ function App() {
         Papyrica
       </Typography>
 
-      {renderBooks()}
+      <BookList books={books} />
     </div>
   );
 }
