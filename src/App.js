@@ -1,8 +1,18 @@
 import { Typography } from "@mui/material";
 import { BookList } from "./components/BookList";
+import { useState, useEffect } from "react";
+import { api } from "./services/api";
 
 function App() {
-  const books = [{ name: "Refactoring" }, { name: "Domain-Driven Design" }];
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    const loadBooks = async () => {
+      const response = await api.get("books");
+      setBooks(response.data);
+    };
+    loadBooks();
+  }, []);
 
   return (
     <div className="App">
