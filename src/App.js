@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 function App() {
   return (
     <div className="App">
-      <Typography variant="h1" component="h1">
+      <Typography variant="h1" component="h1" data-test="siteTitle">
         Papyrica
       </Typography>
     </div>
